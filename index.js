@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import { writeFileSync } from 'fs';
 
-inquirer.prompt([
+const questions = [
   {
     type: 'input',
     name: 'projectTitle',
@@ -48,7 +48,9 @@ inquirer.prompt([
     name: 'email',
     message: 'Email address?',
   },
-])
+];
+
+inquirer.prompt(questions)
 .then((answers) => {
   function renderLicenseBadge(license) {
     if (license === 'Apache 2.0') {
