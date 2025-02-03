@@ -26,7 +26,7 @@ inquirer.prompt([
     type: 'list',
     name: 'license',
     message: 'Choose a license for your project:',
-    choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3-Clause', 'None'],
+    choices: ['Apache 2.0', 'None'],
   },
   {
     type: 'input',
@@ -50,8 +50,16 @@ inquirer.prompt([
   },
 ])
 .then((answers) => {
+  const licenseBadge = answers.license === 'Apache 2.0' 
+    ? '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+    : '';
+
   const readme = `
 # ${answers.projectTitle}
+
+## License
+${answers.license}
+${licenseBadge}
 
 ## Description
 ${answers.description}
@@ -69,9 +77,6 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
-
-## License
-This project is licensed under the ${answers.license} license.
 
 ## Contributing
 ${answers.contributing}
