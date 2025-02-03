@@ -52,7 +52,7 @@ inquirer.prompt([
   },
 ])
 .then((answers) => {
-  const readmeContent = `
+  const readme = `
 # ${answers.projectTitle}
 
 ## Description
@@ -87,9 +87,7 @@ For any questions, please contact me:
 - Email: ${answers.email}
 `;
 
-  writeFileSync('README.md', readmeContent.trim());
-  console.log('README.md has been successfully generated!');
+  writeFileSync('README.md', readme.trim());
+  console.log('README.md has been created! Thank you for using the README bot 9000!');
 })
-.catch((error) => {
-  console.error('An error occurred:', error);
-});
+
