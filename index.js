@@ -5,58 +5,59 @@ inquirer.prompt([
   {
     type: 'input',
     name: 'projectTitle',
-    message: 'What is your project title?',
+    message: 'What are you calling your project?',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'Please provide a description of your project:',
+    message: 'Provide a description of your project:',
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'What are the installation instructions?',
+    message: 'How do you install this?',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'What is this project used for?',
+    message: 'How do you use this?',
   },
   {
     type: 'list',
     name: 'license',
-    message: 'Choose a license for your project:',
+    message: 'Choose a license:',
     choices: ['Apache 2.0', 'None'],
   },
   {
     type: 'input',
     name: 'contributing',
-    message: 'How can others contribute to this project?',
+    message: 'What are you contributing?',
   },
   {
     type: 'input',
     name: 'tests',
-    message: 'What commands should be run for tests?',
+    message: 'How do you test this?',
   },
   {
     type: 'input',
     name: 'github',
-    message: 'What is your GitHub username?',
+    message: 'GitHub username?',
   },
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email address?',
+    message: 'Email address?',
   },
 ])
 .then((answers) => {
-  const licenseBadge = answers.license === 'Apache 2.0' 
-    ? '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-    : '';
-
-    if (answers.license === 'None') {
-      licenseBadge = 'This project is not licenced';
+  function renderLicenseBadge(license) {
+    if (license === 'Apache 2.0') {
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
     }
+    return '';
+  }
+
+  const licenseBadge = renderLicenseBadge(answers.license);
   const readme = `
 # ${answers.projectTitle}
 
@@ -98,3 +99,11 @@ For any questions, please contact me:
   console.log('Thank you for using the README bot 9000!');
 })
 
+
+function generateMarkdown(data) {
+  return `# ${data.title}
+
+`;
+}
+
+export default generateMarkdown;
