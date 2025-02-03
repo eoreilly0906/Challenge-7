@@ -44,3 +44,6 @@ https://github.com/alec-chernicki/portfolio-template/blob/master/README.md
 Badge help:
 (https://shields.io/badges)
 (https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license)
+
+Worked with classmate Danah on some of the generative.js code! Thanks Danah!
+
