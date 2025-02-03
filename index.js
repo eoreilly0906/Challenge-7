@@ -16,12 +16,11 @@ inquirer.prompt([
     type: 'input',
     name: 'installation',
     message: 'What are the installation instructions?',
-    default: 'npm install',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'How do you use this project?',
+    message: 'What is this project used for?',
   },
   {
     type: 'list',
@@ -38,7 +37,6 @@ inquirer.prompt([
     type: 'input',
     name: 'tests',
     message: 'What commands should be run for tests?',
-    default: 'npm test',
   },
   {
     type: 'input',
