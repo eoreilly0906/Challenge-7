@@ -30,3 +30,6 @@ npm test
 For any questions, please contact me:
 - GitHub: [eoreilly0906](https://github.com/eoreilly0906)
 - Email: edwardoreilly0906@gmail.com
+
+- ## Walkthrough Video
+- https://www.youtube.com/watch?v=jfKfPfyJRdk
