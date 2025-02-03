@@ -19,7 +19,7 @@
 ## Contact:
 
 
-**Github:** eoreilly0906
+**Github:** <https://github.com/eoreilly0906>
 
 **Email:** edwardoreilly0906@gmail.com
 
