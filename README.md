@@ -1,7 +1,11 @@
 # challenge 7
 
+## License
+Apache 2.0
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ## Description
-create a readme file
+this creates README files
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,32 +19,15 @@ create a readme file
 npm install
 
 ## Usage
-to create readme files
-
-## License
-This project is licensed under the GPL 3.0 license.
+creating README files
 
 ## Contributing
 not sure
 
 ## Tests
-npm test
+test
 
 ## Questions
 For any questions, please contact me:
 - GitHub: [eoreilly0906](https://github.com/eoreilly0906)
 - Email: edwardoreilly0906@gmail.com
-
- ## Walkthrough Video
-- https://www.youtube.com/watch?v=jfKfPfyJRdk
-
-## Notes on code
-Inquirer code sourced from:
-[text](../class-repo/07-NodeJS/01-Activities/24-Stu_Basic-Inquirer)
-
-Prompt code sourced from:
-[text](https://www.npmjs.com/package/prompt)
-
-Write file sync code sourced from:
-[text](https://www.geeksforgeeks.org/node-js-fs-writefilesync-method/) 
-
