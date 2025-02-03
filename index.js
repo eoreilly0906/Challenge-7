@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import { writeFileSync } from 'fs';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 const questions = [
   {
@@ -26,7 +27,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Choose a license:',
-    choices: ['Apache 2.0', 'None'],
+    choices: ['Apache 2.0', 'MIT', 'None'],
   },
   {
     type: 'input',
@@ -50,62 +51,14 @@ const questions = [
   },
 ];
 
-inquirer.prompt(questions)
-.then((answers) => {
-  function renderLicenseBadge(license) {
-    if (license === 'Apache 2.0') {
-      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
-    }
-    return '';
-  }
-
-  const licenseBadge = renderLicenseBadge(answers.license);
-  const readme = `
-# ${answers.projectTitle}
-
-## License
-${answers.license}
-${licenseBadge}
-
-
-## Description
-${answers.description}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-${answers.installation}
-
-## Usage
-${answers.usage}
-
-## Contributing
-${answers.contributing}
-
-## Tests
-${answers.tests}
-
-## Questions
-For any questions, please contact me:
-- GitHub: [${answers.github}](https://github.com/${answers.github})
-- Email: ${answers.email}
-`;
-
-  writeFileSync('SAMPLEREADME.md', readme.trim());
-  console.log('Thank you for using the README bot 9000!');
-})
-
-
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+function init() {
+  inquirer.prompt(questions)
+    .then((answers) => {
+      const markdown = generateMarkdown(answers);
+      writeFileSync('SAMPLEREADME.md', markdown);
+      console.log('Thank you for using the README bot 9000!');
+    });
 }
 
-export default generateMarkdown;
+init();
+
