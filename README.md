@@ -26,3 +26,21 @@ After googling I was able to find a writefile sync method that worked for me.
 
 **Email:** edwardoreilly0906@gmail.com
 
+## Notes on code
+Inquirer code sourced from the activities from class the past weeks:
+(../class-repo/07-NodeJS/01-Activities/24-Stu_Basic-Inquirer)
+Also:
+(https://www.npmjs.com/package/inquirer)
+
+Prompt code sourced from:
+(https://www.npmjs.com/package/prompt)
+
+Write file sync code sourced from:
+(https://www.geeksforgeeks.org/node-js-fs-writefilesync-method/)
+
+README template	 for project:
+https://github.com/alec-chernicki/portfolio-template/blob/master/README.md
+
+Badge help:
+(https://shields.io/badges)
+(https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license)
