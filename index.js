@@ -52,7 +52,7 @@ inquirer.prompt([
 .then((answers) => {
   const licenseBadge = answers.license === 'Apache 2.0' 
     ? '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-    : 'This project is licenced by the Apache 2.0 license';
+    : '';
 
     if (answers.license === 'None') {
       licenseBadge = 'This project is not licenced';
@@ -63,6 +63,7 @@ inquirer.prompt([
 ## License
 ${answers.license}
 ${licenseBadge}
+
 
 ## Description
 ${answers.description}
@@ -93,7 +94,7 @@ For any questions, please contact me:
 - Email: ${answers.email}
 `;
 
-  writeFileSync('README.md', readme.trim());
-  console.log('README.md has been created! Thank you for using the README bot 9000!');
+  writeFileSync('SAMPLEREADME.md', readme.trim());
+  console.log('Thank you for using the README bot 9000!');
 })
 
