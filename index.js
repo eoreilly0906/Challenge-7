@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-//import { writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 
 inquirer.prompt([
   {
