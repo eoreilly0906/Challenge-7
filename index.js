@@ -52,8 +52,11 @@ inquirer.prompt([
 .then((answers) => {
   const licenseBadge = answers.license === 'Apache 2.0' 
     ? '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-    : '';
+    : 'This project is licenced by the Apache 2.0 license';
 
+    if (answers.license === 'None') {
+      licenseBadge = 'This project is not licenced';
+    }
   const readme = `
 # ${answers.projectTitle}
 
