@@ -5,7 +5,6 @@ This is where you can generate your own READ ME files for your projects!
 
 (https://drive.google.com/file/d/1HeMFJGAhcuTLE2yAVTcBrUrNN89tt9QC/view)
 
-<iframe src="[https://player.vimeo.com/video/VIMEO_VIDEO_ID](https://github.com/user-attachments/assets/0f5d00a2-336f-432c-963b-57fbfbe6b78c)" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## How It's Made:
 Using Javascript and running the application through Node!
