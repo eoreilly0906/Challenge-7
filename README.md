@@ -32,6 +32,9 @@ Inquirer code sourced from the activities from class the past weeks:
 Also:
 (https://www.npmjs.com/package/inquirer)
 
+Example of README generation:
+(https://stackoverflow.com/questions/62597209/trying-to-generate-a-readme-using-nodejs)
+
 Prompt code sourced from:
 (https://www.npmjs.com/package/prompt)
 
@@ -46,4 +49,7 @@ Badge help:
 (https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license)
 
 Worked with classmate Danah on some of the generative.js code! Thanks Danah!
+
+Help with errors and trouble shooting:
+https://www.google.com/
 
